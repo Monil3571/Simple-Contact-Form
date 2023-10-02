@@ -1,3 +1,10 @@
+
+<!-- Findings: I found that the text "no file chosen" which appears after the choose file button for input type=file 
+cannot be styled on its own. Moreover, in order to style radio buttons and checkboxes, their default appearence has to be removed
+but after the default appearence is removed, they inherit the styling from their parent element. But since they inherit their styling 
+from the parent element, the selected radio buttons or checkboxes cannot be distuinguished from un-selected ones, and in order 
+to do to, we have to style them seperately. This is a difficulty that i overcame.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Contact Form</title>
 </head>
 
 <body>
     <div class="formContainer">
 
-        <form action="http://example.com/submit_form" method="post">
+        <form action="http://example.com/submit_form" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend> Enter your Details</legend>
 
